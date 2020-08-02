@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+body {
+    max-width: 1200px;
+}
+
+nav {
+    height: 70px;
+}
+
+.pic {
+    height: 500px;
+}
+
+section {
+    height: 2200px;
+}
+
+footer {
+    height: 500px;
+}
+

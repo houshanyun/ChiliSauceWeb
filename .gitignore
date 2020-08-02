@@ -1,0 +1,4 @@
+.flaskenv
+.env
+.vscode
+__pycache__
