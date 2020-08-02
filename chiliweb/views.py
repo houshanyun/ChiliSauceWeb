@@ -4,4 +4,4 @@ from chiliweb.models import Buylist
 
 @app.route('/', methods=['GET'])
 def index():
-    return '<h1>hello, chili.</h1>'
+    return render_template('index.html')
