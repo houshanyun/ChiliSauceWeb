@@ -6,13 +6,13 @@ body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    font-size: large;    
+    font-size: x-large;    
 }
 
 nav {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: flex-end;
     padding: 2em;
     background-color: #ff3333;
     
@@ -30,28 +30,60 @@ nav a:hover {
 
 }
 
+header {
+    
+}
 
-.pic img {
-    width: 100%;
-    height: 600px;
+img {
+    
+    width: 30%;
+    height: 30%;
 }
 
 section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #ff6633;
+    margin-left: auto;
+    margin-right: auto;
     height: 2200px;
 }
 
+#story {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    
+    color: white;
+    text-align: justify;
+    text-indent: 2em;    
+}
+
+
+#commodity {
+    background-color: #ffcc99;
+}
+
 footer {
-   
+    width: 100%;
     background-color: #ff3333;
 }
 
 #foo1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
     height: 25vh;
     color: rgb(255, 255, 255);
     padding-top: 2em;
     margin-left: 2em;
     line-height: 2em;
     
+}
+
+#foo1-b {
+    margin-left: 10em;
 }
 
 #foo2 {

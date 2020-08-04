@@ -1,0 +1,44 @@
+@charset 'UTF-8';
+
+@media screen and (max-width: 800px) {
+    form {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    form {
+        width: 50%;
+    }
+}
+
+
+form {
+    
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin-top: 0;
+    padding: 2em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form div {
+    margin: 2em;
+}
+
+fieldset {
+    background-color: #ff6633;
+    box-shadow: 5px 5px 5px #000000;
+}
+
+legend {
+    color: black;
+}
+
+.form-bg {
+    margin-top: auto;
+    background-color: #ffcc99;
+    
+}

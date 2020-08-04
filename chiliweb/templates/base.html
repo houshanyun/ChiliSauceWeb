@@ -4,32 +4,37 @@
     {% block head %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <link rel="stylesheet" type="text/css" href={{ url_for('static', filename='index.css') }}>
+    <link rel="stylesheet" href={{ url_for('static', filename='index.css') }}>
+    <link rel="stylesheet" href={{ url_for('static', filename='buy.css') }}>
+    <link rel="stylesheet" href="index.css">
     <title>喜樂園辣椒醬</title>
     {% endblock %}
 </head>
 <body>
-
-
     <nav>
-        <a href="">Home</a>
+        <a href={{ url_for('index')}}>Home</a>
         <a href="">品牌故事</a>
         <a href="">主打商品</a>
         <a href="">推薦食譜</a>
-        <a href="">購買方式</a>   
+        <a href={{ url_for('buy') }}>購買方式</a>
     </nav>
-    <div class="pic"><img src={{ url_for('static', filename='/test_images/a2.jpg') }} alt=""></div>
+    <header><img src={{ url_for('static', filename='title.jpg')}} alt=""></header>
     {% block content %}
 
     {% endblock %}
     <footer>
         <div id="foo1">
-            <span>EMAIL : XXX@mail.com</span><br />
-            <span>STORE : 好吃市集</span>
+            <div id="foo1-a">
+                <span>FACEBOOK : XXX.COM</span><br />
+                <span>STORE : 好吃市集</span><br />
+                <span>STORE : momo</span><br />
+            </div>
+            <div id="foo1-b">
+                <p><a>立刻購買</a></p>
+            </div>
         </div>
         <div id="foo2"><small>&copy;2020 喜樂園辣椒醬</small></div>
     </footer>
-
     {% block scripts %}
     {% endblock %}    
 </body>
