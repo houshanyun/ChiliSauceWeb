@@ -15,8 +15,8 @@ def buy():
         email = request.form['email']
         quantity = request.form['quantity']
 
-        buylist = Buylist(name=name, address=address, phone=phone, email=eamail, quantity=quantity)
-        db,sessiona.add(buylist)
+        buylist = Buylist(name=name, address=address, phone=phone, email=email, quantity=quantity)
+        db.session.add(buylist)
         db.session.commit()
         flash('已送出訂單!')
         return redirect(url_for('index'))

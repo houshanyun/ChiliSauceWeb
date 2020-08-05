@@ -7,6 +7,7 @@ class Buylist(db.Model):
     name = db.Column(db.String(20))
     phone = db.Column(db.Integer)
     address = db.Column(db.String(120))
+    email = db.Column(db.String(50))
     quantity = db.Column(db.Integer)
     nowtime = db.Column(db.DateTime, default=datetime.utcnow, index=True)
 

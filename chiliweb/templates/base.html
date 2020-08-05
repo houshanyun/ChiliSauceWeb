@@ -6,36 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <link rel="stylesheet" href={{ url_for('static', filename='index.css') }}>
     <link rel="stylesheet" href={{ url_for('static', filename='buy.css') }}>
-    <link rel="stylesheet" href="index.css">
     <title>喜樂園辣椒醬</title>
     {% endblock %}
 </head>
 <body>
-    <nav>
-        <a href={{ url_for('index')}}>Home</a>
-        <a href="">品牌故事</a>
-        <a href="">主打商品</a>
-        <a href="">推薦食譜</a>
-        <a href={{ url_for('buy') }}>購買方式</a>
+    <nav id="web-top">
+        <ul>
+            <li class="ul-style"><a href={{ url_for('index') }}>首頁</a></li>
+            <li class="ul-style"><a href="#story">品牌介紹</a></li>
+            <li class="ul-style"><a href="#commodity">主要商品</a></li>
+            <li class="ul-style"><a href="#article">最新消息</a></li>
+            <li class="ul-style"><a href="#foo">聯絡方式</a></li>
+        </ul>
     </nav>
-    <header><img src={{ url_for('static', filename='title.jpg')}} alt=""></header>
     {% block content %}
-
     {% endblock %}
-    <footer>
-        <div id="foo1">
-            <div id="foo1-a">
-                <span>FACEBOOK : XXX.COM</span><br />
-                <span>STORE : 好吃市集</span><br />
-                <span>STORE : momo</span><br />
+    
+    <footer id="foo">
+        <div id="foo-inline">
+            <div>
+                <h1><a href={{ url_for('buy') }}>立刻訂購</a></h1>
+                <ul>
+                    <li class="ul-style"><a href="">電子信箱:XXX@mail.com</a></li>
+                    <li class="ul-style"><a href="">連絡電話:09XX-xxx-ooo</a></li>
+                    <li class="ul-style"><a href="">加入粉絲:facebook.com</a></li>
+                </ul>
             </div>
-            <div id="foo1-b">
-                <p><a>立刻購買</a></p>
-            </div>
+            <div>123456</div>
+            <div>123456</div>
         </div>
-        <div id="foo2"><small>&copy;2020 喜樂園辣椒醬</small></div>
+        <div id="copy">
+            <p><small>&copy; 2020 喜樂園辣椒醬</small></p>
+        </div>    
     </footer>
-    {% block scripts %}
-    {% endblock %}    
+    <div id="top"><a href="#web-top"><img src={{ url_for('static', filename='/images/top.gif') }} alt=""></a></div>
 </body>
 </html>

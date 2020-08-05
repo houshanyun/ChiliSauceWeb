@@ -1,35 +1,39 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="form-bg">
+{{ super() }}
+<section>
+    <div class="form-bg">
+
+        <form action="" method="POST">
+            <fieldset>
+                <legend>訂單資料</legend>
+                <div>
+                    <label for="name">客戶姓名:</label>
+                    <input type="text" name="name" id="name">
+                </div>
+                <div>
+                    <label for="address">宅配住址:</label>
+                    <input type="text" name="address" id="address">
+                </div>
+                <div>
+                    <label for="phone">連絡電話:</label>
+                    <input type="tel" name="phone" id="phone">
+                </div>
+                <div>
+                    <label for="email">電子郵件:</label>
+                    <input type="email" name="email" id="email">
+                </div>        
+                <div>
+                    <label for="quantity">訂購數量:</label>
+                    <input type="number" name="quantity" id="quantity" min="1" max="99">
+                </div>
+                <div>
+                    <input type="submit" value="送出訂單">
+                </div>
+            </fieldset>    
+        </form>
+    </div>
     
-    <form action="" method="POST">
-        <fieldset>
-            <legend></legend>
-            <div>
-                <label for="name">客戶姓名:</label>
-                <input type="text" name="name" id="name">
-            </div>
-            <div>
-                <label for="address">宅配住址:</label>
-                <input type="text" name="address" id="address">
-            </div>
-            <div>
-                <label for="phone">連絡電話:</label>
-                <input type="tel" name="phone" id="phone">
-            </div>
-            <div>
-                <label for="email">電子郵件:</label>
-                <input type="email" name="email" id="email">
-            </div>        
-            <div>
-                <label for="quantity">訂購數量:</label>
-                <input type="number" name="quantity" id="quantity" min="1" max="99">
-            </div>
-            <div>
-                <input type="submit" value="送出訂單">
-            </div>
-        </fieldset>    
-    </form>
-</div>
+</section>
 
 {% endblock %}
