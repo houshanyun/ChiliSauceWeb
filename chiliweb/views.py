@@ -1,6 +1,6 @@
 from flask import render_template, redirect, url_for, request, flash
 from chiliweb import app, db
-from chiliweb.models import Buylist
+from chiliweb.models import Buylist, Admin
 
 @app.route('/', methods=['GET'])
 def index():
@@ -14,6 +14,9 @@ def buy():
         phone = request.form['phone']
         email = request.form['email']
         quantity = request.form['quantity']
+        if not name or not address or not phone or not email or not quantity:
+            flash('你有位輸入的資料喔!')
+            return redirect(url_for('buy')) 
 
         buylist = Buylist(name=name, address=address, phone=phone, email=email, quantity=quantity)
         db.session.add(buylist)
