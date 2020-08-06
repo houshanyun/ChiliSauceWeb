@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<section>
+    {% for buy_id in mybuy %}
+    <div>
+        <p>{{ buy_id.name }}</p>
+        <p>{{ buy_id.quantity }}</p>
+    </div>
+    {% endfor %}
+    
+</section>
+
+{% endblock %}

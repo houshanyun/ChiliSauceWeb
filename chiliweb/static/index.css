@@ -4,7 +4,7 @@ html {
 }
 body {
     width: 100%;
-    max-width: 1100px;
+    max-width: 1200px;
     /*background-color: #ffcc99;*/
     display: flex;
     flex-direction: column;
@@ -17,15 +17,25 @@ body {
     
 }
 
-a {
+
+
+nav a {
     text-decoration: none;
     font-size: large;
     font-weight: bold;
+    color: #fff;
+}
+
+nav a:hover {
+    color: rgb(228, 231, 62);
+    border: 3px solid #ffffff;
+    border-radius: 5px;
+    font-size: xx-large;
 }
 
 nav {
     width: 100%;
-    height: 100px;
+    height: 75px;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -68,7 +78,7 @@ header {
 #title-text div {
     margin-left: 4em;
     margin-bottom: 8em;
-    color: #c54318;
+    color: #ff6633;
     font-size: larger;
     font-family: "微軟正黑體";
 }
@@ -78,6 +88,12 @@ header {
 section {
     width: 100%;
     background-color: #ffcc99;
+}
+
+
+
+h1 , a {
+    text-decoration: none;
 }
 
 .section-style {
@@ -103,16 +119,31 @@ section {
 
 }
 
-#story-out {}
-
 #pic-s img {
-    border: #ff6633;
+    width: 300px;
+    background-color: #fff;
+    box-shadow: 5px 5px 5px #353535;
+    border: 1px solid #ff6633;
     border-radius: 1em;
+    
 }
 
-#story {}
+ h1 a {
+    color: #ff6633;
+}
 
-#commodity-out {}
+#commodity h1 a:hover {
+    color: #ff3333;
+    border: 3px solid #ff3333;
+    border-radius: 5px;
+    font-size: x-large;
+}
+
+#article {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
 
 #article div {
     margin: 2em;
@@ -120,7 +151,7 @@ section {
 
 footer {
     width: 100%;
-    height: 300px;
+    height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -132,15 +163,31 @@ footer {
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
+}
+
+#foo-inline h1 a:hover {
+    color: rgb(228, 231, 62);
+    border: 3px solid #ffffff;
+    border-radius: 5px;
+    font-size: xx-large;
+
 }
 
 footer div h1 {
     margin-left: 1.2em;
+    color: #fff;
 }
+
+footer a {
+    color: #fff;
+}
+
+
 
 footer ul li {
     margin-bottom: 0.5em;
+    color: #fff;
 }
 
 #copy {
@@ -151,11 +198,16 @@ footer ul li {
 #top {
     width: 100px;
     height: 100px;
-    background-image: url('/static/images/top.gif');
+    /*background-image: url('/images/top.gif');*/
     position: fixed;
     right: 1em;
     bottom: 1em;
-    border: 1px solid #858585;
-    border-radius: 10px;
+    border: 1px solid #ff6633;
+    border-radius: 1em;
+    
+}
+
+#top:hover {
+    box-shadow: 3px 3px 3px 3px #fd916d, -3px -3px 3px 3px #fd916d;
 }
 

@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <link rel="stylesheet" href={{ url_for('static', filename='index.css') }}>
     <link rel="stylesheet" href={{ url_for('static', filename='buy.css') }}>
+    <link rel="stylesheet" href={{ url_for('static', filename='admin.css') }}>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>喜樂園辣椒醬</title>
     {% endblock %}
 </head>
@@ -32,13 +34,22 @@
                     <li class="ul-style"><a href="">加入粉絲:facebook.com</a></li>
                 </ul>
             </div>
-            <div>123456</div>
-            <div>123456</div>
+            <div></div>
+            <div>
+                <h1>店面位置</h1>
+                <div>
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3645.503524895568!2d121.60654711531045!3d23.97799018595996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34689fc1aebc22bd%3A0x3694837623966768!2z5beo5Yyg6Zu76IWmLeiKseiTruiqjeitiSB8IOWtuOmbu-iFpuiqsueoiyB8IOmbu-iFpuijnOe_kuePrQ!5e0!3m2!1szh-TW!2stw!4v1596677736478!5m2!1szh-TW!2stw" 
+                        width="250" height="250" frameborder="0" style="border:2px solid #000;" allowfullscreen="" aria-hidden="false" tabindex="0">
+                    </iframe>
+                </div>
+            </div>
         </div>
         <div id="copy">
             <p><small>&copy; 2020 喜樂園辣椒醬</small></p>
         </div>    
     </footer>
     <div id="top"><a href="#web-top"><img src={{ url_for('static', filename='/images/top.gif') }} alt=""></a></div>
+    <script src={{ url_for('static', filename='main.js') }}></script>
 </body>
 </html>
