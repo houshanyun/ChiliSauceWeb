@@ -13,7 +13,7 @@ def  initdb(drop):
 
 @app.cli.command()
 @click.option('--username', prompt=True, help='login system')
-@click.option('--password', prompt=True, hind_input=True, confirmation_prompt=True, help='user to login')
+@click.option('--password', prompt=True, hide_input=True, confirmation_prompt=True, help='user to login')
 def admin(username, password):
     db.create_all()
 

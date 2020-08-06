@@ -11,6 +11,8 @@ flask-sqlalchemy = "*"
 flask-moment = "*"
 python-dotenv = "*"
 pymysql = "*"
+flask-login = "*"
+flask-mail = "*"
 
 [requires]
 python_version = "3.7"
