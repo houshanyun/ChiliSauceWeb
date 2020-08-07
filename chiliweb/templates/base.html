@@ -7,11 +7,15 @@
     <link rel="stylesheet" href={{ url_for('static', filename='index.css') }}>
     <link rel="stylesheet" href={{ url_for('static', filename='buy.css') }}>
     <link rel="stylesheet" href={{ url_for('static', filename='admin.css') }}>
+    <link rel="stylesheet" href={{ url_for('static', filename='boss.css') }}>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>喜樂園辣椒醬</title>
     {% endblock %}
 </head>
 <body>
+    {% for message in get_flashed_messages() %}
+        <div class="alert">{{ message }}</div>
+    {% endfor %}
     <nav id="web-top">
         <ul>
             <li class="ul-style"><a href={{ url_for('index') }}>首頁</a></li>

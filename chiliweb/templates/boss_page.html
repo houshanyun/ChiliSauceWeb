@@ -3,12 +3,11 @@
 
 <section>
     {% for buy_id in mybuy %}
-    <div>
-        <p>{{ buy_id.name }}</p>
-        <p>{{ buy_id.quantity }}</p>
+    <div id="total">
+        <p>{{ buy_id.name }} : {{ buy_id.quantity }} : {{buy_id.nowtime}}</p>
     </div>
     {% endfor %}
-    
+
 </section>
 
 {% endblock %}
