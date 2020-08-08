@@ -1,7 +1,7 @@
 import click
 
 from chiliweb import app, db
-from chiliweb.models import Buylist, Admin
+from chiliweb.models import Admin
 
 @app.cli.command()
 @click.option('--drop', is_flag=True, help='create db')

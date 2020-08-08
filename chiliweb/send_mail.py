@@ -1,6 +1,6 @@
 from threading import Thread
 
-from flask_mail import Message, Mail
+from flask_mail import Message
 
 from chiliweb.models import Buylist
 from chiliweb import app, mail
@@ -15,6 +15,7 @@ def sendMail():
     quantity = txt[0].quantity
     time = txt[0].nowtime
     m_title = '有人下單了!'
+    m_sender = 'likeredbean@gmail.com'
     m_mymail = ['nigellin.1008@gmail.com']
     m_html = \
     f'''
@@ -28,6 +29,7 @@ def sendMail():
 
     msg = Message(
         m_title,
+        sender=m_sender,
         recipients=m_mymail
         )
     msg.html = m_html

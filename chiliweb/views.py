@@ -5,8 +5,6 @@ from flask_login import login_user, login_required, logout_user, current_user
 
 from chiliweb import send_mail
 
-from datetime import datetime
-
 @app.route('/', methods=['GET'])
 def index():
     return render_template('index.html')

@@ -6,7 +6,6 @@ from flask_moment import Moment
 from flask_login import LoginManager
 from flask_mail import Mail
 
-
 #import pymysql
 
 #pymysql.install_as_MySQLdb()
