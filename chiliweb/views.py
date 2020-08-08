@@ -1,7 +1,9 @@
 from flask import render_template, redirect, url_for, request, flash
 from chiliweb import app, db
 from chiliweb.models import Buylist, Admin
-from flask_login import login_user, login_required
+from flask_login import login_user, login_required, logout_user, current_user
+
+from datetime import datetime
 
 @app.route('/', methods=['GET'])
 def index():
@@ -30,6 +32,8 @@ def buy():
 
 @app.route('/admin', methods=['GET', 'POST'])
 def admin():
+    if current_user.is_authenticated:
+        return  redirect('boss_page')
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
@@ -46,9 +50,16 @@ def admin():
             return redirect(url_for('admin'))
     return render_template('admin.html')
 
+@app.route('/logout')
+@login_required
+def logout():
+    logout_user()
+    flash('goodbye...')
+    return redirect(url_for('index'))
+
 @app.route('/boss_page', methods=['GET'])
 @login_required
 def boss_page():
-    all_buy = Buylist.query.all()
+    all_buy = Buylist.query.order_by(Buylist.nowtime.desc()).all()
 
     return render_template('boss_page.html', mybuy=all_buy)

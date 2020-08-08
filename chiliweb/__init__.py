@@ -18,6 +18,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(os.path.dirn
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
+moment = Moment(app)
 login_manager = LoginManager(app)
 
 @login_manager.user_loader

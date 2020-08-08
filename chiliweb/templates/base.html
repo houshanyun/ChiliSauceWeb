@@ -9,20 +9,27 @@
     <link rel="stylesheet" href={{ url_for('static', filename='admin.css') }}>
     <link rel="stylesheet" href={{ url_for('static', filename='boss.css') }}>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    
     <title>喜樂園辣椒醬</title>
     {% endblock %}
 </head>
 <body>
-    {% for message in get_flashed_messages() %}
+    {% with messages = get_flashed_messages() %}
+    {% for message in messges %}
         <div class="alert">{{ message }}</div>
     {% endfor %}
+    {% endwith %}
     <nav id="web-top">
         <ul>
-            <li class="ul-style"><a href={{ url_for('index') }}>首頁</a></li>
+            <li class="ul-style"><a href={{ url_for('index') }}>首頁</a></li>            
             <li class="ul-style"><a href="#story">品牌介紹</a></li>
             <li class="ul-style"><a href="#commodity">主要商品</a></li>
             <li class="ul-style"><a href="#article">最新消息</a></li>
             <li class="ul-style"><a href="#foo">聯絡方式</a></li>
+            {% if current_user.is_authenticated %}
+            <li class="ul-style"><a href={{ url_for('boss_page') }}>訂單資料</a></li>
+            <li class="ul-style"><a href={{ url_for('logout') }}>登出</a></li>
+            {% endif %}    
         </ul>
     </nav>
     {% block content %}
@@ -53,7 +60,12 @@
             <p><small>&copy; 2020 喜樂園辣椒醬</small></p>
         </div>    
     </footer>
-    <div id="top"><a href="#web-top"><img src={{ url_for('static', filename='/images/top.gif') }} alt=""></a></div>
+    
     <script src={{ url_for('static', filename='main.js') }}></script>
+    {% block script %}
+    {{ moment.include_jquery() }}
+    {{ moment.include_moment() }}
+    {{ moment.locale('zh-cn') }}
+    {% endblock %}
 </body>
 </html>

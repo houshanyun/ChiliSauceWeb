@@ -17,6 +17,10 @@ body {
     
 }
 
+.alert {
+    
+}
+
 
 
 nav a {
@@ -63,9 +67,7 @@ header {
         linear-gradient(115deg, rgb(251, 195, 173) 50%, transparent 50%)
         center left/ 85% 100%,
         url('/static/images/title.jpg') center right/ 100% 100%;
-    background-repeat: 
-        no-repeat,
-        no-repeat;
+    background-repeat: no-repeat;
 }
 
 #title-text {
@@ -119,15 +121,6 @@ h1 , a {
 
 }
 
-#pic-s img {
-    width: 300px;
-    background-color: #fff;
-    box-shadow: 5px 5px 5px #353535;
-    border: 1px solid #ff6633;
-    border-radius: 1em;
-    
-}
-
  h1 a {
     color: #ff6633;
 }
@@ -137,6 +130,17 @@ h1 , a {
     border: 3px solid #ff3333;
     border-radius: 5px;
     font-size: x-large;
+}
+
+#commodity p img {
+    width: 50%;
+    height: 50%;
+}
+
+#pic-com {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
 }
 
 #article {

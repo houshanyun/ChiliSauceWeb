@@ -8,19 +8,22 @@
 </header>
 <section>
     <div id="story-out" class="section-style">   
-        <div id="pic-s"><img src={{ url_for('static', filename='/images/web_logo2.gif') }} alt=""></div>
+        
         <div id="story" class="text-style" name="s1">
-            <h1>品牌故事</h1>
-            <p>
-                辣椒富含營養，但很多人敬謝不敏 ,不敢吃辣，其實是未曾吃到美味的好辣椒。」
-                辣椒，是這麼吃的～輕放在舌尖，先吸吮汁液，再細細咀嚼，感受層次分明、豐饒多變的滋味，與深沉有韻的香滋。
-                從舌尖至全身，一點一點暖了起來,再加上蒜蓉獨特的香氣，兩者渾然天成的好味道油然而生.
-            </p>    
-            <p>
-                家裡人口少,每每只有自己和女兒用餐,常不知如何準備,因緣際會下做了蒜蓉辣椒醬,
-                這成為我們餐桌上的明星,不論是拌飯'拌麵'吃餃子,餛飩湯,甚至連炒菜,做涼拌都少不了它,
-                從此展開另一段奇妙的香料人生。胃裡暖和了，心就熱了,願我們的喜樂成為大家餐桌上的祝福      
-            </p>    
+            <div id="pic-s"><img src={{ url_for('static', filename='/images/web_logo2.gif') }} alt=""></div>
+            <div>
+                <h1>品牌故事</h1>
+                <p>
+                    辣椒富含營養，但很多人敬謝不敏 ,不敢吃辣，其實是未曾吃到美味的好辣椒。」
+                    辣椒，是這麼吃的～輕放在舌尖，先吸吮汁液，再細細咀嚼，感受層次分明、豐饒多變的滋味，與深沉有韻的香滋。
+                    從舌尖至全身，一點一點暖了起來,再加上蒜蓉獨特的香氣，兩者渾然天成的好味道油然而生.
+                </p>    
+                <p>
+                    家裡人口少,每每只有自己和女兒用餐,常不知如何準備,因緣際會下做了蒜蓉辣椒醬,
+                    這成為我們餐桌上的明星,不論是拌飯'拌麵'吃餃子,餛飩湯,甚至連炒菜,做涼拌都少不了它,
+                    從此展開另一段奇妙的香料人生。胃裡暖和了，心就熱了,願我們的喜樂成為大家餐桌上的祝福      
+                </p> 
+            </div>   
         </div>
     </div>
     <hr>
@@ -34,10 +37,14 @@
                 不沾水的杓子，否則易發霉；開封後記得放冰箱，以保存其鮮度及美味。 開罐後可直接食用，做沾料、炒菜、拌飯、
                 火鍋、羹湯、拌各種小菜之佐料使用，只要適量的酙酌使用，不但可增添料理時的美味，
                 更可以將料理的層次提昇 ，為料理最佳調味料。<br />
-                <h1><a href={{ url_for('buy') }}>立刻訂購</a></h1>
+                <h1>一罐200元</h1><h1><a href={{ url_for('buy') }}>立刻訂購</a></h1>
             </p>
+            <p id="pic-com">
+                <img src={{ url_for('static', filename='/images/a21.jpg')}} alt="">
+                <img src={{ url_for('static', filename='/images/a41.jpg')}} alt="">
+            </p>
+            
         </div>
-        <div id="pic-s"><img src={{ url_for('static', filename='/images/s1.jpg')}} alt=""></div>
     </div>
     <hr>
     <div  id="article-out">
@@ -74,4 +81,5 @@
         </div>
     </div>    
 </section>
+<div id="top"><a href="#web-top"><img src={{ url_for('static', filename='/images/top.gif') }} alt=""></a></div>
 {% endblock %}

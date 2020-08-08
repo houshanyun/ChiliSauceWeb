@@ -2,12 +2,31 @@
 {% block content %}
 
 <section>
-    {% for buy_id in mybuy %}
+    <h1 class="boss-h1">訂單資料</h1>
     <div id="total">
-        <p>{{ buy_id.name }} : {{ buy_id.quantity }} : {{buy_id.nowtime}}</p>
+        {% for buy_id in mybuy %}
+            <div id="table">
+                <p>客戶姓名 : {{ buy_id.name }}</p>
+                <p>訂購數量 : {{ buy_id.quantity }}</p>
+                <p>住址 : {{ buy_id.address }}</p>
+                <p>電話 : {{ buy_id.phone }}</p>
+                <p>訂購數量 : {{ buy_id.quantity }}</p>
+                <p>時間 : {{ moment(buy_id.nowtime).format('lll') }}</p>        
+            </div>
+            <!-- <table>
+                <tr>
+                    <td>客戶姓名 : {{ buy_id.name }}</td>
+                    <td>訂購數量 : {{ buy_id.quantity }}</td>
+                    <td>住址 : {{ buy_id.address }}</td>    
+                </tr>
+                <tr>
+                    <td>電話 : {{ buy_id.phone }}</td></td>
+                    <td>email : {{ buy_id.email }}</td>    
+                    <td>時間 : {{ moment(buy_id.nowtime).format('lll') }}</td>
+                </tr>
+            </table>     -->
+        {% endfor %}
     </div>
-    {% endfor %}
 
 </section>
-
 {% endblock %}
