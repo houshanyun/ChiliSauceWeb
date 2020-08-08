@@ -18,7 +18,15 @@ body {
 }
 
 .alert {
-    
+    width: 150px;
+    height: 70px;
+    position: fixed;
+    top: 5em;
+    left: 5em;
+    background-color: khaki;
+    border: 1px solid #858585;
+    border-radius: 5px; 
+    color: #ff3333;   
 }
 
 

@@ -15,10 +15,13 @@
 </head>
 <body>
     {% with messages = get_flashed_messages() %}
-    {% for message in messges %}
-        <div class="alert">{{ message }}</div>
-    {% endfor %}
-    {% endwith %}
+    {% if messages %}
+        {% for message in get_flashed_messages() %}
+            <div class="alert">{{ message }}</div>
+        {% endfor %}
+    {%endif%}
+    {% endwith%}
+    
     <nav id="web-top">
         <ul>
             <li class="ul-style"><a href={{ url_for('index') }}>首頁</a></li>            

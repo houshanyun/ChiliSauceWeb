@@ -3,6 +3,8 @@ from chiliweb import app, db
 from chiliweb.models import Buylist, Admin
 from flask_login import login_user, login_required, logout_user, current_user
 
+from chiliweb import send_mail
+
 from datetime import datetime
 
 @app.route('/', methods=['GET'])
@@ -20,11 +22,12 @@ def buy():
         if not name or not address or not phone or not email or not quantity:
             flash('你有沒輸入的資料...')
             return redirect(url_for('buy')) 
-
         buylist = Buylist(name=name, address=address, phone=phone, email=email, quantity=quantity)
         db.session.add(buylist)
         db.session.commit()
         flash('已送出訂單...')
+        send_mail.sendMail()
+
         return redirect(url_for('index'))
 
     return render_template('buy.html')
@@ -61,5 +64,4 @@ def logout():
 @login_required
 def boss_page():
     all_buy = Buylist.query.order_by(Buylist.nowtime.desc()).all()
-
     return render_template('boss_page.html', mybuy=all_buy)
