@@ -15,6 +15,7 @@ def  initdb(drop):
 @click.option('--username', prompt=True, help='login system')
 @click.option('--password', prompt=True, hide_input=True, confirmation_prompt=True, help='user to login')
 def admin(username, password):
+    
     db.create_all()
 
     user = Admin.query.first()
