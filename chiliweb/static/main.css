@@ -5,10 +5,14 @@
     list-style: none;
 }
 
+html {
+    Scroll-behavior: smooth; 
+}
+
 
 /* 以下為選單樣式 */
 
-/* 隱藏checked多寫幾種隱藏方式酖作保險 */
+/* 隱藏checked多寫幾種隱藏方式作保險 */
 #menu_checked {
     position: absolute;
     z-index: -99;
@@ -23,12 +27,13 @@
 
 #web_top nav {
     width: 70%;
-    height: calc(100vh - 100px);
+    height: calc(50vh - 0px);
     background-color: #ff3333;
     position: absolute;
     top: 70px;
     left: -100%;
     transition: 1s;
+    z-index: 99;
     
 }
 
@@ -86,44 +91,152 @@ header {
     width: 100%;
     margin: auto;
     position: relative;
-    z-index: -1;
+    /* z-index: 0; */
 }
 
+.wrap_head {
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    margin-top: 0;
+}
+
+
 .header_text {
-    width: 70%;
+    width: 300px;
     height: 200px;
-    background-color: rgba(255, 204, 153, .8);
+    background-color: #ffcc99d8;
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     margin: auto;
-   
+    transform: scaleY(0);
+    transition: 1s;
+
 }
+
+.wrap_head:hover .header_text {
+
+    transform: scaleY(1);
+
+}
+
 
 .header_text h1 {
     font-size: large;
+    font-weight: bold;
     font-family: "微軟正黑體", Arial, sans-serif;
-    color: #ff6633;
+    color: #ff3333;
     margin-top: 20px;
     margin-left: 20px;
     margin-bottom: 1em;
 }
 
-.header_text h4 {
-    font-size: small;
+.header_text p {
+    font-size: medium;
+    font-weight: bold;
     font-family: "微軟正黑體", Arial, sans-serif;
-    color: #ff6633;
+    color: #ff3333;
     margin-left: 20px;
 }
 
 .header_pic {
-    width: 80%;
+    
     margin: auto;
+
 }
 
 .header_pic img {
     width: 100%;
+    height: 100%;
     vertical-align: bottom;
+}
+
+/* 以下為以下為article樣式 */
+
+article {
+    width: 100%;
+    margin: auto;
+}
+
+
+.pic_logo {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+
+#pic_com {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.text_style p {
+    width: 80%;
+    margin: auto;
+    text-align: justify;
+    text-indent: 2em;
+    margin-bottom: 20px;
+}
+
+.text_style > h1 {
+    width: 80%;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+#article {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+#go_top {
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+}
+
+footer {
+    width: 80%;
+    margin: auto;
+}
+
+#web_bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#web_bottom div + div {
+    margin-bottom: 2em;
+}
+
+#web_bottom h1 {
+
+    margin-bottom: 1em;
+
+}
+
+#web_bottom ul li {
+    line-height: 1.5em;
+}
+
+#copy {
+    width: 50%;
+    margin: 0 auto 2em;
+    text-align: center;
+
 }

@@ -4,15 +4,25 @@
 
 
 <header>
-    <div class="header_text">
-        <h1>家常，就是一種樸實無華</h1>
-        <h4>喜樂園蒜蓉辣椒醬 <br />
-            讓家常味道有一些刺激<br />
-            為你的家庭增添一點溫暖</h4>
+
+    <div class="wrap_head">
+
+        <div class="header_text">
+            <h1>家常，就是一種樸實無華</h1>
+            <p>
+                喜樂園蒜蓉辣椒醬 <br />
+                讓家常味道有一些刺激<br />
+                為你的家庭增添一點溫暖
+            </p>
+        </div>
+        
+        <div class="header_pic">
+            <img src={{ url_for('static', filename='/images/title.jpg') }} alt="">    
+        </div>
+        
+        
     </div>
-    <div class="header_pic">
-        <img src={{ url_for('static', filename='/images/title.jpg') }} alt="">    
-    </div>
+    
     
 </header>
 
@@ -20,8 +30,8 @@
 
 <article>          
     <div id="story">
-            <div class="pic-logo"><img src={{ url_for('static', filename='/images/web_logo2.gif') }} alt=""></div>
-            <div class="text-style">
+            <div class="pic_logo"><img src={{ url_for('static', filename='/images/web_logo2.gif') }} alt=""></div>
+            <div class="text_style">
                 <h1>品牌故事</h1>
                 <p>
                     辣椒富含營養，但很多人敬謝不敏 ,不敢吃辣，其實是未曾吃到美味的好辣椒。」
@@ -38,7 +48,7 @@
     <hr>
     <div id="commodity">
         
-        <div  class="text-style">
+        <div  class="text_style">
             <h1>商品介紹</h1>
             <p>
                 嚴選花東縱谷種植之辣椒及雲林蒜頭,得意的一天純芥花油,鹽,糖高溫炒製而成,保留原味及營養價值,
@@ -46,45 +56,50 @@
                 不沾水的杓子，否則易發霉；開封後記得放冰箱，以保存其鮮度及美味。 開罐後可直接食用，做沾料、炒菜、拌飯、
                 火鍋、羹湯、拌各種小菜之佐料使用，只要適量的酙酌使用，不但可增添料理時的美味，
                 更可以將料理的層次提昇 ，為料理最佳調味料。<br />
-                <h1>一罐200元</h1><h1><a class="buy-style" href={{ url_for('buy') }}>立刻訂購</a></h1>
+                <h1>一罐200元</h1>
+                <h1><a class="buy-style" href={{ url_for('buy') }}>立刻訂購</a></h1>
             </p>
         </div>
-        <div id="pic-com">
+        <div id="pic_com">
+            
             
             <img src={{ url_for('static', filename='/images/a21.jpg')}} alt="">
+            
+            
             <img src={{ url_for('static', filename='/images/a41.jpg')}} alt="">
+            
             
         </div>
     </div>
     <hr>
     
     <div id="article">
-            <div class="text-style">
+            <div class="text_style">
                 <h1>a1</h1>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, ullam vel molestiae at doloremque
                     voluptatem reiciendis expedita? Aliquam quasi natus earum nobis officiis asperiores? Quibusdam 
                     eos sint ab eligendi dolore?</p>
             </div>
-            <div class="text-style">
+            <div class="text_style">
                 <h1>a3</h1>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis saepe eligendi sed accusamus
                      sequi! Vel porro, repellat voluptatibus sed necessitatibus tenetur inventore exercitationem 
                      aut vitae dolorum doloremque aspernatur deleniti minus.</p>
             </div>
-            <div class="text-style">
+            <div class="text_style">
                 <h1>a2</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, 
                 molestias tenetur eveniet explicabo hic velit expedita blanditiis sunt, 
                 cum perferendis doloribus officiis architecto cupiditate sapiente quam 
                 nesciunt mollitia suscipit fugiat.</p>
             </div>
-            <div class="text-style">
+            <div class="text_style">
                 <h1>a4</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus labore inventore 
                 fuga ut quisquam non eum amet corporis corrupti illo? Harum dolorum, 
                 unde neque libero cum impedit autem pariatur provident!</p>
             </div>
-            <div class="text-style">
+            <div class="text_style">
                 <h1>a5</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci ipsam nihil dolore voluptatibus
                  explicabo commodi, officia unde repellendus nemo. Et dolorem sint expedita sequi ducimus non fuga
@@ -93,5 +108,5 @@
     </div>
     
 </article>
-<div id="go-top"><a href="#web-top"><img src={{ url_for('static', filename='/images/top.gif') }} alt=""></a></div>
+<div id="go_top"><a href="#web_top"><img src={{ url_for('static', filename='/images/top.gif') }} alt=""></a></div>
 {% endblock %}
