@@ -28,6 +28,6 @@ def admin(username, password):
         user = Admin(username=username)
         user.set_password(password)
         db.session.add(user)
-
+        
     db.session.commit()
     click.echo('Done')
