@@ -5,32 +5,30 @@
     <div class="form-bg">
 
         <form action="" method="POST">
-            <fieldset>
-                <legend>訂單資料</legend>
+            
                 <div>
-                    <label for="name">客戶姓名:</label>
+                    <label for="name">客戶姓名 : </label>
                     <input type="text" name="name" id="name" placeholder="必填" required>
                 </div>
                 <div>
-                    <label for="address">宅配住址:</label>
+                    <label for="address">宅配住址 : </label>
                     <input type="text" name="address" id="address" placeholder="必填" required>
                 </div>
                 <div>
-                    <label for="phone">連絡電話:</label>
+                    <label for="phone">連絡電話 : </label>
                     <input type="tel" name="phone" id="phone" placeholder="必填" required>
                 </div>
                 <div>
-                    <label for="email">電子郵件:</label>
+                    <label for="email">電子郵件 : </label>
                     <input type="email" name="email" id="email" placeholder="必填" required>
                 </div>        
                 <div>
-                    <label for="quantity">訂購數量:</label>
+                    <label for="quantity">訂購數量 : </label>
                     <input type="number" name="quantity" id="quantity" min="1" max="99" placeholder="必填" required>
                 </div>
-                <div>
-                    <input type="submit" value="送出訂單" onclick="formFuc()">
+                <div >
+                    <input  class="on_sub" type="submit" value="送出訂單" onclick="formFuc()">
                 </div>
-            </fieldset>
             
         </form>
     </div>

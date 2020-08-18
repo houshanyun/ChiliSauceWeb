@@ -3,10 +3,26 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    font-family: "微軟正黑體", Arial, sans-serif;
+    box-sizing: border-box;
 }
 
 html {
     Scroll-behavior: smooth; 
+}
+
+a {
+    text-decoration: none;
+}
+
+.buy_style {
+    color: #000;
+    transition: .5s;
+}
+
+.buy_style:hover {
+    border: 3px solid #fa0;
+    border-radius: 5px;
 }
 
 
@@ -45,9 +61,18 @@ html {
 #web_top nav a {
     display: block;
     text-decoration: none;
+    font-size: large;
+    font-weight: bold;
     color: white;
     padding: 20px 50px;
     border-bottom: 1px solid white;
+    transition: 0.5s;
+
+}
+
+#web_top nav a:hover {
+    background-color: #fa0;
+
 }
 
 
@@ -59,6 +84,14 @@ html {
     position: absolute;
     top: 10px;
     right: 10px;
+}
+
+.menu_btn:hover {
+    background-color: #ff6633;
+}
+
+.menu_btn:active {
+    background-color: #fa0;
 }
 
 /* 隱藏span多寫幾種隱藏方式酖作保險 */
@@ -135,50 +168,53 @@ header {
 }
 
 .header_text p {
+
     font-size: medium;
     font-weight: bold;
-    font-family: "微軟正黑體", Arial, sans-serif;
     color: #ff3333;
     margin-left: 20px;
 }
 
 .header_pic {
     
-    margin: auto;
-
-}
-
-.header_pic img {
     width: 100%;
-    height: 100%;
-    vertical-align: bottom;
+    height: 50vh;
+    margin: auto;
+    background-image: url('/static/images/title.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    
+
 }
+
 
 /* 以下為以下為article樣式 */
 
 article {
     width: 100%;
     margin: auto;
+    margin-bottom: 1em;
 }
 
-
 .pic_logo {
-    width: 80%;
+
     margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 
 }
 
 
 
 #pic_com {
-    width: 80%;
+    width: 100%;
     margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.text_style img {
+    margin: auto;
 }
 
 
@@ -187,31 +223,53 @@ article {
     margin: auto;
     text-align: justify;
     text-indent: 2em;
+    line-height: 1.5em;
     margin-bottom: 20px;
 }
 
 .text_style > h1 {
     width: 80%;
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    font-size: xx-large;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 
 }
 
 #article {
     display: flex;
     flex-direction: column-reverse;
+    margin-top: 3em;
+}
+
+#article .wrap {
+    flex-basis: 400px;
+    margin: auto;
+}
+
+#article .wrap img {
+    width: 100%;
 }
 
 #go_top {
     position: fixed;
     bottom: 1em;
     right: 1em;
+    transition: .3s;
+    
+    
+}
+
+#go_top:hover {
+    border: 3px solid #fa0;
+    border-radius: 5px;
+
 }
 
 footer {
-    width: 80%;
+    width: 100%;
     margin: auto;
+    background-color: #ff3333;
 }
 
 #web_bottom {
@@ -224,19 +282,312 @@ footer {
     margin-bottom: 2em;
 }
 
-#web_bottom h1 {
 
+#web_bottom h1 {
+    margin-top: 1em;
     margin-bottom: 1em;
+    color: white;
+    text-align: center;
 
 }
 
-#web_bottom ul li {
-    line-height: 1.5em;
+#web_bottom  h1 a:hover {
+
+
+    border: 3px solid #fa0;
+    border-radius: 5px;
+    
+}
+
+
+#web_bottom a {
+    display: block;
+    line-height: 2em;
+    color: white;
 }
 
 #copy {
     width: 50%;
-    margin: 0 auto 2em;
+    margin: 0 auto;
+    padding-top: 2em;
+    padding-bottom: 2em;
     text-align: center;
+    color: #aaa;
+
+}
+
+@media screen and (min-width: 768px) {
+
+
+    .menu_btn {display: none;}
+
+    #web_top nav {
+        width: 100%;
+        height: 70px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 99;
+    }
+
+    #web_top nav a {
+
+        color: white;
+        border-bottom: none;
+        padding: 20px;
+    }
+
+    /* header樣式 */
+
+    .wrap_head {
+        width: 100%;
+        margin: auto;
+        margin-top: 0;
+        background-color: #ffcc99;
+    }
+
+
+    .header_pic {
+
+        width: 100%;
+        height: 100vh;
+        margin: auto;
+        background-image: url('/static/images/title.jpg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+    
+        
+    
+    }
+
+    .header_pic img {
+        width: 100%;
+        vertical-align: bottom;
+    }
+
+
+    .header_text {
+        width: 40%;
+        background-color: #ffcc99d8;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        top: unset;
+        left: 0;
+        bottom: 10em;
+        right: unset;
+        margin: auto;
+        transform: scaleY(1);
+        transition: 1s;
+        text-align: left;
+        padding-left: 6em;
+        padding-bottom: 2em;
+    }
+
+
+    .header_text h1 {
+        font-size: x-large;
+        font-weight: bold;
+        font-family: "微軟正黑體", Arial, sans-serif;
+        color: #ff3333;
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-bottom: 0.5em;
+    }
+    
+    .header_text p {
+        font-size: medium;
+        font-weight: bold;
+        /* font-family: "微軟正黑體", Arial, sans-serif; */
+        color: #ff3333;
+        margin-left: 20px;
+    }
+
+    #story {
+        margin: auto;
+    }
+    #story > .pic_logo {
+        width: 400px;
+        margin: auto;
+    }
+
+    #story > .text_style {
+        width: 60%;
+        margin: auto;
+
+    }
+
+    #commodity > .text_style {
+        width: 60%;
+        margin: auto;
+    }
+
+
+    #pic_com {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 2em;
+        background-color: #ff6633;
+    }
+
+
+
+    #article {
+        width: 100%;
+        max-width: 1200px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap-reverse;
+        justify-content: space-around;
+        margin: auto;
+    }
+
+    #article .wrap {
+        flex-basis: 400px;
+        margin: auto;
+    }
+
+
+    #article .wrap img {
+        width: 100%;
+    
+    }
+
+
+    #web_bottom {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: unset;
+    }
+
+    #web_bottom  > div + div {
+        margin: 0 2em;
+    }
+}
+
+
+/* 以下為購買樣式 */
+
+section {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* overflow: scroll; */
+}
+
+.form-bg {
+    
+    background-color: #ff6633;
+
+    backdrop-filter: blur(5px);
+
+    width: 300px;
+    padding: 2em 5em;
+    border-radius: 10px;
+    
+}
+
+.form-bg form div {
+    height: 40px;
+    color: white;
+    font-size: larger;
+    font-weight: bold;
+    margin-top: 1em;
+}
+
+
+input {
+    height: 30px;
+}
+
+input:hover {
+    box-shadow: 0px 0px 5px 5px #ffcc99;
+    border: 2px solid #ff3333;
+    border-radius: 5px;
+
+}
+
+.on_sub {
+    width: 100px;
+    background-color: #ffcc99;
+    border: none;
+    color: #ff3333;
+    font-size: medium;
+    font-weight: 900;
+    font-family: "微軟正黑體";
+}
+
+#user {
+
+    width: 100px;
+    background-color: #ffcc99;
+    border: none;
+    color: #ff3333;
+    font-size: medium;
+    font-weight: 900;
+    font-family: "微軟正黑體";
+
+}
+
+
+#user:hover {
+    border: 2px solid #ff3333;
+    border-radius: 5px;
+
+}
+
+/* 訂單樣式 */
+
+
+
+.boss-h1 {
+
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bold;
+    margin: 2em auto;
+
+}
+#total {
+
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: white;
+    margin: auto;
+    margin-bottom: 2em;
+
+}
+#table { 
+
+    border: 2px solid #333;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    
+}
+
+#total p {
+
+    width: 200px;
+    height: 50px;
+    padding-top: 0.5em;
+    padding-left: 0.5em;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-bottom: 1px solid #333;
 
 }

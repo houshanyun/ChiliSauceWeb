@@ -17,7 +17,6 @@
         </div>
         
         <div class="header_pic">
-            <img src={{ url_for('static', filename='/images/title.jpg') }} alt="">    
         </div>
         
         
@@ -45,7 +44,9 @@
                 </p> 
             </div>   
     </div>
-    <hr>
+
+
+
     <div id="commodity">
         
         <div  class="text_style">
@@ -57,7 +58,7 @@
                 火鍋、羹湯、拌各種小菜之佐料使用，只要適量的酙酌使用，不但可增添料理時的美味，
                 更可以將料理的層次提昇 ，為料理最佳調味料。<br />
                 <h1>一罐200元</h1>
-                <h1><a class="buy-style" href={{ url_for('buy') }}>立刻訂購</a></h1>
+                <h1><a class="buy_style" href={{ url_for('buy') }}>立刻訂購</a></h1>
             </p>
         </div>
         <div id="pic_com">
@@ -71,40 +72,31 @@
             
         </div>
     </div>
-    <hr>
+
     
     <div id="article">
-            <div class="text_style">
-                <h1>a1</h1>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, ullam vel molestiae at doloremque
-                    voluptatem reiciendis expedita? Aliquam quasi natus earum nobis officiis asperiores? Quibusdam 
-                    eos sint ab eligendi dolore?</p>
+            <div class="wrap">
+                <div class="img">
+                    <img src={{ url_for('static', filename='/images/DM.jpg')}} alt="">
+                </div>
+                <div class="text_style">
+                    <h1>廣告DM</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci ipsam nihil dolore voluptatibus
+                    explicabo commodi, officia unde repellendus nemo. Et dolorem sint expedita sequi ducimus non fuga
+                    sed deleniti eum?</p>
+                </div>
             </div>
-            <div class="text_style">
-                <h1>a3</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis saepe eligendi sed accusamus
-                     sequi! Vel porro, repellat voluptatibus sed necessitatibus tenetur inventore exercitationem 
-                     aut vitae dolorum doloremque aspernatur deleniti minus.</p>
-            </div>
-            <div class="text_style">
-                <h1>a2</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, 
-                molestias tenetur eveniet explicabo hic velit expedita blanditiis sunt, 
-                cum perferendis doloribus officiis architecto cupiditate sapiente quam 
-                nesciunt mollitia suscipit fugiat.</p>
-            </div>
-            <div class="text_style">
-                <h1>a4</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus labore inventore 
-                fuga ut quisquam non eum amet corporis corrupti illo? Harum dolorum, 
-                unde neque libero cum impedit autem pariatur provident!</p>
-            </div>
-            <div class="text_style">
-                <h1>a5</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci ipsam nihil dolore voluptatibus
-                 explicabo commodi, officia unde repellendus nemo. Et dolorem sint expedita sequi ducimus non fuga
-                sed deleniti eum?</p>
-            </div>    
+            <div class="wrap">
+                <div class="img">
+                    <img src={{ url_for('static', filename='/images/card.jpg')}} alt="">
+                </div>
+                <div class="text_style">
+                    <h1>名片</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci ipsam nihil dolore voluptatibus
+                    explicabo commodi, officia unde repellendus nemo. Et dolorem sint expedita sequi ducimus non fuga
+                    sed deleniti eum?</p>
+                </div>
+            </div>  
     </div>
     
 </article>
