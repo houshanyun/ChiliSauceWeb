@@ -13,7 +13,9 @@
                 <p>電話 : {{ buy_id.phone }}</p>
                 <p>電子信箱 : {{ buy_id.email }}</p>
                 <p>時間 : {{ moment(buy_id.nowtime).format('lll') }}</p>
+                <a  class="del" href={{ url_for('delete', b_id=buy_id.id) }} onclick="listFuc()">Delete</a>
             </div>
+            
         {% endfor %}
         </div>
     </div>

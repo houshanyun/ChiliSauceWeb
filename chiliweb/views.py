@@ -63,3 +63,22 @@ def logout():
 def boss_page():
     all_buy = Buylist.query.order_by(Buylist.nowtime.desc()).all()
     return render_template('boss_page.html', mybuy=all_buy)
+
+
+
+@app.route('/delete/<int:b_id>', methods=['GET', 'POST'])
+@login_required
+def delete(b_id):
+    buy_item = Buylist.query.get_or_404(b_id)
+    db.session.delete(buy_item)
+    db.session.commit()
+    return redirect(url_for('boss_page'))
+
+@app.errorhandler(404)
+def page_not(e):
+    return render_template('404.html'), 404
+
+
+@app.errorhandler(500)
+def page_not1(e):
+    return render_template('500.html'), 500

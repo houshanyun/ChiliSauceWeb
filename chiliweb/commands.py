@@ -1,7 +1,7 @@
 import click
 
 from chiliweb import app, db
-from chiliweb.models import Admin
+from chiliweb.models import Admin, Buylist
 
 @app.cli.command()
 @click.option('--drop', is_flag=True, help='create db')
@@ -31,3 +31,29 @@ def admin(username, password):
         
     db.session.commit()
     click.echo('Done')
+
+
+@app.cli.command()
+@click.option('--count', default=20, help='faker')
+def forge(count):
+
+    from faker import Faker
+
+    db.drop_all()
+    db.create_all()
+
+    fake = Faker('zh_tw')
+    click.echo('資料生成中...')
+
+    for _ in range(count):
+        test_list = Buylist(
+            name = fake.name(),
+            phone= fake.phone_number(),
+            address = fake.address(),
+            email = fake.email(),
+            quantity = fake.random_digit()
+        )
+        db.session.add(test_list)
+    
+    db.session.commit()
+    click.echo('資料完成...')

@@ -10,3 +10,12 @@ function formFuc() {
         alert('訂單已取消...')
     }
 };
+
+
+function listFuc() {
+    if (confirm('確定刪除訂單嗎?')) {
+        alert('訂單已刪除...')
+    } else {
+        alert('取消刪除...')
+    }
+};
