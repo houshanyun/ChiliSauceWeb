@@ -42,6 +42,8 @@ def forge(count):
     db.drop_all()
     db.create_all()
 
+    
+
     fake = Faker('zh_tw')
     click.echo('資料生成中...')
 
@@ -54,6 +56,11 @@ def forge(count):
             quantity = fake.random_digit()
         )
         db.session.add(test_list)
+    
+    user = Admin(username = "boss")
+    user.set_password("123")
+    db.session.add(user)
+    # db.session.commit()
     
     db.session.commit()
     click.echo('資料完成...')

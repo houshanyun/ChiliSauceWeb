@@ -11,8 +11,8 @@ class Buylist(db.Model):
     address = db.Column(db.String(120))
     email = db.Column(db.String(50))
     quantity = db.Column(db.Integer)
+    shipment = db.Column(db.Boolean, default=False)
     nowtime = db.Column(db.DateTime, default=datetime.utcnow, index=True)
-    
 
 class Admin(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)

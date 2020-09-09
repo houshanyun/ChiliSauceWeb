@@ -16,15 +16,15 @@
                 </div>
                 <div>
                     <label for="phone">連絡電話 : </label>
-                    <input type="tel" name="phone" id="phone" placeholder="必填" required>
+                    <input type="tel" name="phone" id="phone" placeholder="必填" required pattern="^[09]\d{9}$">
                 </div>
                 <div>
                     <label for="email">電子郵件 : </label>
-                    <input type="email" name="email" id="email" placeholder="必填" required>
+                    <input type="email" name="email" id="email" placeholder="必填" required pattern="^\w+@\w+.\w+$">
                 </div>        
                 <div>
                     <label for="quantity">訂購數量 : </label>
-                    <input type="number" name="quantity" id="quantity" min="1" max="99" placeholder="必填" required>
+                    <input type="number" name="quantity" id="quantity" min="1" max="99" placeholder="必填" required pattern="^\d{1,2}$">
                 </div>
                 <div >
                     <input  class="on_sub" type="submit" value="送出訂單" onclick="formFuc()">

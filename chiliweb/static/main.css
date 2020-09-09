@@ -4,11 +4,11 @@
     padding: 0;
     list-style: none;
     font-family: "微軟正黑體", Arial, sans-serif;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
 
 html {
-    Scroll-behavior: smooth; 
+    Scroll-behavior: smooth;
 }
 
 a {
@@ -24,8 +24,6 @@ a {
     border: 3px solid #fa0;
     border-radius: 5px;
 }
-
-
 /* 以下為選單樣式 */
 
 /* 隱藏checked多寫幾種隱藏方式作保險 */
@@ -38,11 +36,8 @@ a {
 #web_top {
     height: 70px;
     background-color: #ff3333;
-    position: relative;    
+    position: relative;
 }
-
-
-
 #web_top nav a {
     display: block;
     width: auto;
@@ -55,7 +50,6 @@ a {
     transition: 0.5s;
 
 }
-
 #web_top nav a:hover {
     background-color: #fa0;
 
@@ -65,28 +59,27 @@ a {
 @media screen and (max-width: 767px) {
 
 
-
     #web_top nav {
         width: 70%;
-        height: calc(50vh - 0px);
+        height: calc(100vh - 100px);
         background-color: #ff3333;
         position: absolute;
         top: 70px;
         left: -100%;
-        transition: 1s;
+        transition: .5s;
         z-index: 99;
-        
+
     }
-    
+
     /* 讀取checkbox的狀態 */
     #menu_checked:checked ~ #web_top nav {
         left: 0;
     }
-    
-    
-    
-    
-    
+
+
+
+
+
     .menu_btn {
         width: 50px;
         height: 50px;
@@ -96,15 +89,15 @@ a {
         top: 10px;
         right: 10px;
     }
-    
+
     .menu_btn:hover {
         background-color: #ff6633;
     }
-    
+
     .menu_btn:active {
         background-color: #fa0;
     }
-    
+
     /* 隱藏span多寫幾種隱藏方式酖作保險 */
     .menu_btn span {
         opacity: 0;
@@ -113,7 +106,7 @@ a {
         height: 1px;
         overflow: hidden;
     }
-    
+
     .menu_btn::before {
         content: '';
         width: 42px;
@@ -126,7 +119,7 @@ a {
         margin: auto;
         box-shadow: 0 10px 0 #ffcc99,
                     0 -10px 0 #ffcc99;
-        
+
     }
 
 
@@ -142,13 +135,13 @@ a {
         margin: auto;
         transform: scaleY(0);
         transition: 1s;
-    
+
     }
 
     .wrap_head:hover .header_text {
 
         transform: scaleY(1);
-    
+
     }
 
     #article .wrap {
@@ -156,6 +149,22 @@ a {
         box-shadow: 0 0 5px 0px #ccc;
         padding: 2em 2em;
         margin: 2em auto;
+    }
+
+
+    #article .wrap_title {
+        flex-basis: 400px;
+        margin: auto;
+        box-shadow: 0 0 5px 0px #ccc;
+        padding: 2em 2em;
+        margin: 2em auto;
+
+    }
+
+
+    #article .wrap_title img {
+        width: 100%;
+
     }
 
 
@@ -202,7 +211,7 @@ header {
 }
 
 .header_pic {
-    
+
     width: 100%;
     height: 50vh;
     margin: auto;
@@ -210,7 +219,7 @@ header {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
-    
+
 
 }
 
@@ -253,7 +262,7 @@ article {
     width: 80%;
     margin: auto;
 
-   
+
 
 }
 
@@ -263,7 +272,6 @@ article {
     width: 100%;
     margin: auto;
     text-align: justify;
-    text-indent: 2em;
     line-height: 1.5em;
     margin-bottom: 20px;
 }
@@ -285,7 +293,7 @@ article {
     text-align: center;
     color: #ffcc99;
     background-color: #ff6633;
-    
+
 }
 
 
@@ -294,9 +302,6 @@ article {
     flex-direction: column-reverse;
     margin-top: 3em;
 }
-
-
-
 
 #article .wrap img {
     width: 100%;
@@ -307,8 +312,8 @@ article {
     bottom: 1em;
     right: 1em;
     transition: 0.3s;
-    
-    
+
+
 }
 
 #go_top:hover {
@@ -348,7 +353,7 @@ footer {
 #web_bottom  h1 a:hover {
 
     color: #fa0;
-    
+
 }
 
 
@@ -415,14 +420,28 @@ footer {
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center center;
-    
-        
-    
+
+
+
     }
 
     .header_pic img {
         width: 100%;
         vertical-align: bottom;
+    }
+
+    @keyframes h_text {
+
+        from {
+            left: -100%;
+            bottom: 10em;
+        }
+        to {
+
+            left: 0 ;
+            bottom: 10em;
+        }
+
     }
 
 
@@ -438,10 +457,11 @@ footer {
         bottom: 10em;
         right: unset;
         margin: auto;
-        transform: scaleY(1);
-        transition: 1s;
         padding-top: 2em;
         padding-bottom: 2em;
+        animation-name: h_text;
+        animation-duration: 1s;
+        animation-timing-function: ease;
     }
 
 
@@ -455,7 +475,7 @@ footer {
         margin-bottom: 0.5em;
         margin: auto;
     }
-    
+
     .header_text p {
         text-align: center;
         font-size: medium;
@@ -467,8 +487,8 @@ footer {
     #story {
         margin: auto;
         margin-bottom: 3em;
-        
-        
+
+
     }
     #story .pic_logo {
         width: 400px;
@@ -520,13 +540,29 @@ footer {
         box-shadow: 0 0 5px 0px #ccc;
         padding: 2em 2em;
         margin: 2em auto;
-        
+
     }
 
 
     #article .wrap img {
         width: 100%;
-    
+
+    }
+
+
+
+    #article .wrap_title {
+        flex-basis: 800px;
+        margin: auto;
+        box-shadow: 0 0 5px 0px #ccc;
+        padding: 2em 2em;
+        margin: 2em auto;
+
+    }
+
+    #article .wrap_title img {
+        width: 100%;
+
     }
 
 
@@ -586,14 +622,29 @@ footer {
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center center;
-    
-        
-    
+
+
+
     }
 
     .header_pic img {
         width: 100%;
         vertical-align: bottom;
+    }
+
+
+    @keyframes h_text {
+
+        from {
+            left: -100%;
+            bottom: 10em;
+        }
+        to {
+
+            left: 0 ;
+            bottom: 10em;
+        }
+
     }
 
 
@@ -609,11 +660,9 @@ footer {
         bottom: 10em;
         right: unset;
         margin: auto;
-        transform: scaleY(1);
-        transition: 1s;
-        
         padding-top: 2em;
         padding-bottom: 2em;
+        animation: h_text 1s ease;
     }
 
 
@@ -627,7 +676,7 @@ footer {
         margin: auto;
         margin-bottom: 0.5em;
     }
-    
+
     .header_text p {
         text-align: center;
         font-size: medium;
@@ -639,11 +688,11 @@ footer {
     #story {
         margin: auto;
         margin-bottom: 3em;
-        
-        
+
+
     }
     #story .pic_logo {
-        width: 400px;
+        width: 30%;
         margin: auto;
     }
 
@@ -692,13 +741,28 @@ footer {
         box-shadow: 0 0 5px 0px #ccc;
         padding: 2em 2em;
         margin: 2em auto;
-        
+
     }
 
 
     #article .wrap img {
         width: 100%;
-    
+
+    }
+
+
+    #article .wrap_title {
+        flex-basis: 800px;
+        margin: auto;
+        box-shadow: 0 0 5px 0px #ccc;
+        padding: 2em 2em;
+        margin: 2em auto;
+
+    }
+
+    #article .wrap_title img {
+        width: 100%;
+
     }
 
 
@@ -709,7 +773,7 @@ footer {
         align-items: unset;
     }
 
-    
+
 }
 
 
@@ -725,13 +789,13 @@ section {
 }
 
 .form_bg {
-    
+
     background-color: #ff6633;
     backdrop-filter: blur(5px);
     width: 500px;
-    padding: 2em 5em;
+    padding: 2em 2em;
     border-radius: 10px;
-    
+
 }
 
 
@@ -748,7 +812,7 @@ section {
 
 
 input {
-    width: 60%;
+    width: 40%;
     height: 30px;
 }
 
@@ -800,6 +864,18 @@ input:hover {
     margin: 2em auto;
 
 }
+
+
+.boss-h2 {
+
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
+    margin: 2em auto;
+
+}
+
+
 #total {
 
     width: 80%;
@@ -812,22 +888,35 @@ input:hover {
     margin-bottom: 2em;
 
 }
-#table { 
+#table {
 
     border: 2px solid #333;
     margin-top: 1em;
     margin-bottom: 1em;
-    
+
+}
+.ship {
+
+    display: block;
+    font-weight: bold;
+    font-family: "微軟正黑體";
+    font-size: large;
+    color: #ff3333;
+    text-align: center;
+    line-height: 30px;
+    transition: .5s;
+    border-bottom: 1px solid #333;
+
 }
 
+.ship:hover {
+    color: #ff6633;
+    background-color: #ffcc99;
+}
 #total p {
 
-    width: 200px;
-    height: 50px;
-    padding-top: 0.5em;
-    padding-left: 0.5em;
-    margin-top: 0;
-    margin-bottom: 0;
+    width: 350px;
+    line-height: 36px;
     border-bottom: 1px solid #333;
 
 }
@@ -847,7 +936,7 @@ input:hover {
 }
 
 .del {
-    width: 208px;
+    /* width: 208px; */
     display: block;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
